@@ -1,0 +1,37 @@
+body {
+    margin: 0px;
+}
+
+#navbar-items {
+    display: flex;
+    float: right;
+}
+
+#nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+#home-icon {
+    float: left;
+}
+
+
+/* h2 {
+    margin: 20px
+} */
