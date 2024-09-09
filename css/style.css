@@ -116,9 +116,54 @@ body {
 }
 
 html body {
-    background-color: #5793d5;
+    background: linear-gradient(135deg, #87CEFA, #6eaadb, #6ab4ff, #b8c9ff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
 }
 
 #resume {
     background-color: #5793d5;
+}
+
+footer {
+    background-color: #333;
+    height: 200px;
+}
+
+footer>p {
+    color: rgb(211, 206, 206);
+}
+
+.svg-container:hover {
+    background-color: #5793d5;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.svg-container {
+    height: 60px;
+    width: 60px;
+    opacity: 0.6;
+}
+
+#arrow {
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+
+#arrow:hover {
+    top: 10px;
 }
