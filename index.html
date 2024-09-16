@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -25,7 +24,7 @@
     <div id="top-section">
         <ul id="nav">
             <li id="home-icon">
-                <a href="#pic-section"><img src="/images/favicons/favicon-32x32.png" width="26px" height="26px"></a>
+                <a href="#pic-section" class="d-flex"><img src="/images/favicons/favicon-32x32.png" width="27px" height="27px"></a>
             </li>
             <div id="navbar-items">
                 <li><a href="#about-section">About</a></li>
@@ -91,41 +90,52 @@
             <div class="row d-flex align-items-center">
                 <div class="col-lg-6">
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#tsod-modal">
-                    <div class="card" style="width: 18rem; height:23rem">
-                        <img src="images/draden.png" class="card-img-top" alt="...">
+                    <div class="card" style="width: 30rem; height:31rem">
+                        <img src="images/draden.png" class="card-img-top" style="width:30rem; height: 20rem" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">The Story of Draden</h5>
                             <p class="card-text">Worked in a team of four to design and develop a novel fantasy RPG for a UMICH game dev showcase.</p>
+                            <span class="badge rounded-pill bg-secondary">C#</span>
+                            <span class="badge rounded-pill bg-secondary">Unity</span>
+                            <span class="badge rounded-pill bg-secondary">Agile</span>
                         </div>
                     </div>
-                </button>
+                    </button>
                 </div>
                 <div class="col-lg-6">
-                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <div class="card" style="width: 18rem; height:23rem">
-                        <img src="images/insta485b.png" class="card-img-top object-fit-fill" style="height:204px" alt="...">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#insta485-modal">
+                    <div class="card" style="width: 30rem; height:31rem">
+                        <img src="images/insta485.png" class="card-img-top" style="width:30rem; height: 20rem" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Insta485</h5>
-                            <p class="card-text">Used React and Flask to create a website mimicking Instagram's functionality.</p>
+                            <p class="card-text">Created and deployed a website mimicking Instagram's functionality.</p>
+                            <span class="badge rounded-pill bg-secondary">React</span>
+                            <span class="badge rounded-pill bg-secondary">Flask</span>
+                            <span class="badge rounded-pill bg-secondary">AWS</span>
+                            <span class="badge rounded-pill bg-secondary">SQL</span>
                         </div>
                     </div>
-                </button>
+                    </button>
+                </div>
+
+            </div>
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-6">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#mysite-modal">
+                    <div class="card" style="width: 30rem; height:31rem">
+                        <img src="images/mysite.png" class="card-img-top" style="width:30rem; height: 20rem" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">This Website</h5>
+                            <p class="card-text">Designed, implemented, and deployed my own personal website to showcase my experience and projects.</p>
+                            <span class="badge rounded-pill bg-secondary">Bootstrap</span>
+                            <span class="badge rounded-pill bg-secondary">HTML/CSS/JS</span>
+                            <span class="badge rounded-pill bg-secondary">AWS</span>
+                        </div>
+                    </div>
+                    </button>
                 </div>
             </div>
-            <!-- <div class="row d-flex align-items-center">
 
-                <div class="col-lg-6">
-                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <div class="card" style="width: 18rem;">
-                        <img src="images/yukino.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Portfolio (This website!)</h5>
-                            <p class="card-text">Used Bootstrap5 and Jquery to create a simple static website, deployed with S3.  </p>
-                        </div>
-                    </div>
-                </button>
-                </div>
-            </div> -->
         </div>
         <div id="contact-section" class="d-flex flex-column align-items-center p-5 fade-in-element">
             <h2>Contact</h2>
@@ -154,10 +164,14 @@
         </div>
     </div>
     <footer class="d-flex flex-column align-items-center justify-content-center">
-        <p>Created by Jack Kolbert with Boostrap.</p>
+        <p>Created by Jack Kolbert using Bootstrap5</p>
         <p>Michigan Stadium image credit: <a href="https://www.flickr.com/photos/46789814@N05/15085516080/in/photolist-oZ4dmQ-pgwaG3">Jason Crotty</a></p>
 
     </footer>
+
+
+
+
     <!-- Modals -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -191,7 +205,49 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="insta485-modal" tabindex="-1" aria-labelledby="insta485Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Insta485</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex flex-column align-items-center">
+                    <ul>
+                        <li>Used HTML/CSS/Javascript with React to create a website mimicking Instagram's functionality, including likes, posts, comments, following, and more.</li>
+                        <li>Implemented a custom REST API with Flask connected to an SQLite database to manage data.</li>
+                        <li>Deployed website using Amazon Web Services (AWS) EC2 Ubuntu instance.</li>
+                        <li>Advanced features include infinite scroll, API pagination, client-side reactivity, encrypted login, cookies.</li>
+                    </ul>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="mysite-modal" tabindex="-1" aria-labelledby="mySiteModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Portfolio Website</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <ul>
+                    <li>Designed and created my personal website using Bootstrap5 and HTML/CSS/JS.</li>
+                    <li>Deployed with AWS S3 static website hosting, using Route 53 for DNS.</li>
+                    <li>Used Cloudfront to reduce latency and costs.</li>
+                    <li>Had fun learning lots of Bootstrap&#128522;</li>
+                </ul>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>

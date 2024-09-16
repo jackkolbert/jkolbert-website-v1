@@ -1,4 +1,4 @@
-// bootstrap check
+// jquery check
 // $(document).ready(function() {
 //     $("#demo").html("Hello, World!");
 // });
