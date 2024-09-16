@@ -8,12 +8,14 @@ body {
 }
 
 #top-section {
-    position: relative;
+    position: sticky;
     z-index: 3;
+    top: 0;
     /* Higher z-index to ensure it’s on top */
 }
 
 #nav {
+    position: sticky;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -37,29 +39,6 @@ li a:hover {
     float: left;
 }
 
-.node {
-    width: 30px;
-    height: 30px;
-    background-color: #5793d5;
-    border: 4px solid #90bbeb;
-    border-radius: 50%;
-    z-index: 1;
-    padding: 20px;
-}
-
-.timeline-container {
-    height: 200px;
-    width: 800px;
-}
-
-.actual-timeline {
-    background-color: #5793d5;
-    height: 10px;
-    border: 2px solid black;
-    border-radius: 12px;
-    padding: 5px;
-}
-
 .overlay {
     position: absolute;
     top: 0;
@@ -70,41 +49,32 @@ li a:hover {
     justify-content: center;
     align-items: center;
     color: white;
-    /* Set text color */
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Optional: semi-transparent background */
     z-index: 2;
-    /* Ensure overlay is above the image */
 }
 
 #top-container {
     position: relative;
     width: 100%;
     height: 100vh;
-    /* Full viewport height */
 }
 
 .image-container {
     position: relative;
     width: 100%;
     height: 100vh;
-    /* Full viewport height */
     overflow: hidden;
-    /* Ensure no overflow */
 }
 
 .image-container img {
     width: 100%;
     height: 100%;
-    /* Ensure the image covers the container */
     object-fit: cover;
-    /* Ensure the image scales properly */
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
-    /* Image is beneath the overlay */
 }
 
 body {
@@ -116,21 +86,7 @@ body {
 }
 
 html body {
-    background: linear-gradient(135deg, #87CEFA, #6eaadb, #6ab4ff, #b8c9ff);
-    background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite;
-}
-
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 0%;
-    }
-    50% {
-        background-position: 100% 100%;
-    }
-    100% {
-        background-position: 0% 0%;
-    }
+    background: linear-gradient(180deg, #59b2fc, #7dcdff, #a9d4ff, #d9e2ff);
 }
 
 #resume {
@@ -166,4 +122,97 @@ footer>p {
 
 #arrow:hover {
     top: 10px;
+}
+
+
+/* Initially hide the element */
+
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+
+/* When the element is in view, apply this class */
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.node {
+    width: 30px;
+    height: 30px;
+    background-color: #5793d5;
+    border: 4px solid #90bbeb;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-container {
+    height: 200px;
+    width: 80%;
+}
+
+.actual-timeline {
+    background-color: #5793d5;
+    height: 10px;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.above-node {
+    top: -90px;
+    position: absolute;
+    /* Pushes the content above the node upwards */
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+}
+
+.below-node {
+    color: #333;
+    margin-top: 50px;
+    font-size: 14px;
+    text-align: center;
+    position: absolute;
+}
+
+.node-container {
+    position: relative;
+    width: 100px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    /* If you want dots under the hoverable text */
+}
+
+
+/* Tooltip text */
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    /* positioning right */
+    top: -5px;
+    left: 105%;
+}
+
+
+/* Show the tooltip text when you mouse over the tooltip container */
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
